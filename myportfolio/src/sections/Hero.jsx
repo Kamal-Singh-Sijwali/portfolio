@@ -1,4 +1,5 @@
 import { Button } from "@/components/Button";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   ChevronDown,
@@ -36,12 +37,15 @@ const skills = [
   "Git",
   "GitHub Actions",
   "Jira",
-  "Agile Development"
+  "Agile Development",
 ];
 
 export const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
       {/* Bg */}
       <div className="absolute inset-0">
         <img
@@ -78,48 +82,69 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-green-600">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer 
+                Software Engineer
               </span>
             </div>
 
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100 ">
-              Building  <span className="animate-gradient glow-text">Scalable</span>
+                Building{" "}
+                <span className="animate-gradient glow-text">Scalable</span>
                 <br />
-                Web Experiences That <span className="animate-gradient glow-text">Users Love.</span>
+                Web Experiences That{" "}
+                <span className="animate-gradient glow-text">Users Love.</span>
                 <br />
-               
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-              Hi, I'm <span className="text-white italic bold">Kamal Singh Sijwali </span>— a Full Stack Software Developer specializing in React.js, Node.js. I build scalable, high-performance web applications with a focus on clean architecture, exceptional user experiences, and enterprise-grade solutions.
+                Hi, I'm{" "}
+                <span className="text-white italic bold">
+                  Kamal Singh Sijwali{" "}
+                </span>
+                — a Full Stack Software Developer specializing in React.js,
+                Node.js. I build scalable, high-performance web applications
+                with a focus on clean architecture, exceptional user
+                experiences, and enterprise-grade solutions.
               </p>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg" onClick={()=>{
-                const contactSection = document.getElementById("contact");
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: "smooth" });
-                }
-              }}>
+              <Button
+                size="lg"
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-                <a className="flex gap-3" href="https://drive.google.com/file/d/1YkV0O4j8HpHLXKCb_mYBGM13yLx88WNr/view" target="_blank">
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5 mt-1" />
-                Download CV
-              </AnimatedBorderButton>
-                </a>
+              <a
+                className="flex gap-3"
+                href="https://drive.google.com/file/d/1YkV0O4j8HpHLXKCb_mYBGM13yLx88WNr/view"
+                target="_blank"
+              >
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5 mt-1" />
+                  Download CV
+                </AnimatedBorderButton>
+              </a>
             </div>
 
             {/* Social Links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               {/* <span className="text-base text-white">Follow me: </span> */}
               {[
-                { icon: Github, href: "https://github.com/Kamal-Singh-Sijwali" },
-                { icon: Linkedin, href: "https://www.linkedin.com/in/kamal-singh-sijwali/" },
+                {
+                  icon: Github,
+                  href: "https://github.com/Kamal-Singh-Sijwali",
+                },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/kamal-singh-sijwali/",
+                },
                 // { icon: Twitter, href: "#" },
               ].map((social, idx) => (
                 <a
@@ -143,14 +168,36 @@ export const Hero = () => {
               from-primary/30 via-transparent 
               to-primary/10 blur-2xl animate-pulse"
               />
-              <div className="relative glass rounded-3xl p-2 glow-border">
-                <img
-                  src="/myimg.png"
-                  alt="Kamal Singh Sijwali"
-                  className="w-full aspect-[4/5] object-cover rounded-2xl"
-                />
+              <div className="relative ">
+                <div className="absolute -inset-8 bg-gradient-to-r from-cyan-500 via-purple-500 to-green-400 blur-[90px] opacity-40 animate-pulse" />
 
-                {/* Floating Badge */}
+                <motion.div
+                  className="relative"
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  whileHover={{
+                    rotateX: 5,
+                    rotateY: -5,
+                    scale: 1.03,
+                  }}
+                  style={{ perspective: 1000 }}
+                >
+                  <motion.img
+                    src="/portfoliosticker.png"
+                    alt="Kamal Singh Sijwali"
+                    className="w-full aspect-[4/5] object-cover rounded-2xl"
+                    animate={{
+                      y: [0, -10, 0],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
+
+                    {/* Floating Badge */}
                 <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
@@ -160,12 +207,13 @@ export const Hero = () => {
                   </div>
                 </div>
                 {/* Stats Badge */}
-                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-00 z-100">
                   <div className="text-2xl font-bold text-green-600">3+</div>
-                  <div className="text-xs text-white">
-                    Years Exp.
-                  </div>
+                  <div className="text-xs text-white">Years Exp.</div>
                 </div>
+                </motion.div>
+
+             
               </div>
             </div>
           </div>

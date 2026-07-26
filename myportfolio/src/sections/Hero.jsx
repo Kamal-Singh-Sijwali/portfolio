@@ -123,7 +123,7 @@ export const Hero = () => {
               </Button>
               <a
                 className="flex gap-3"
-                href="https://drive.google.com/file/d/1YkV0O4j8HpHLXKCb_mYBGM13yLx88WNr/view"
+                href="https://drive.google.com/file/d/117UY_hOFyOSN_r8jS-_lX8Kclhbnv-pR/view?usp=sharing"
                 target="_blank"
               >
                 <AnimatedBorderButton>

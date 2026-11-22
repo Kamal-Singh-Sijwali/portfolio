@@ -1,6 +1,15 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
+   {
+    title: "Videotube | Full Stack Media Platform",
+    description:
+      "Built a scalable media-sharing platform supporting 100+ concurrent video uploads using the MERN stack.",
+    image: "/projects/project1.png",
+    tags: ["React", "JavaScript", "NodeJS", "MongoDB", "Prime React"],
+    link: "https://videotube-9k2a.vercel.app/",
+    github: "https://github.com/Kamal-Singh-Sijwali/videotube/tree/dev",
+  },
   {
     title: "Crypto Z Coin Exchange",
     description:
@@ -10,15 +19,7 @@ const projects = [
     link: "https://cryptoz-steel.vercel.app/",
     github: "https://github.com/Kamal-Singh-Sijwali/coinmaster",
   },
-  {
-    title: "Videotube | Full Stack Media Platform",
-    description:
-      "Built a scalable media-sharing platform supporting 100+ concurrent video uploads using the MERN stack.",
-    image: "/projects/project1.png",
-    tags: ["React", "JavaScript", "NodeJS", "MongoDB", "Prime React"],
-    link: "https://github.com/Kamal-Singh-Sijwali/videotube/tree/dev",
-    github: "https://github.com/Kamal-Singh-Sijwali/videotube/tree/dev",
-  },
+ 
   // {
   //   title: "E-Commerce Platform",
   //   description:

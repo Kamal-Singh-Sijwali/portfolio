@@ -6,12 +6,14 @@ import { Experience } from "@/sections/Experience";
 import { Contact } from "@/sections/Contact";
 import { Footer } from "./layout/Footer";
 import AnimatedCursor from "./components/AnimatedCursor";
+import { AiChatBot } from "./components/AiChatBot";
 
 function App() {
   return (
     <>
-       <AnimatedCursor />
-    <div className="min-h-screen overflow-x-hidden">
+      <AnimatedCursor />
+      <AiChatBot />
+      <div className="min-h-screen overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />

@@ -1,55 +1,5 @@
-const experiences = [
-  {
-    period: "Oct 2024 — Present",
-    role: "Software Engineer",
-    company: "Akitra",
-    description:
-      "Developing enterprise SaaS applications for cybersecurity, quality management, and regulatory compliance. Built scalable full-stack modules including Travelers, Requirements Management, CAPA, and a reusable Comments Microservice. Improved application performance through lazy loading, optimized data handling, and workflow automation while collaborating in Agile teams.",
-    technologies: ["React", "TypeScript", "Next.js", "Node.js", "MongoDB", "AWS", "PostgreSQL","Git","Postman","Docker","Jira","Jenkins","Nginx","Prisma ORM","REST APIs","JWT"],
-    current: true,
-  },
- 
-  {
-    period: "Nov 2023 — Apr 2024",
-    role: "Senior Trainee",
-    company: "Akitra",
-    description:
-      "Engineered a Requirements Management module for an enterprise compliance SaaS platform, enabling end-to-end requirement tracking, approval workflows, status management, traceability, and audit-ready documentation. Built full-stack features for hierarchical organization, filtering, tagging, bulk actions, review cycles, and integration with test cases, test plans, and defect management workflows.",
-    technologies: ["React", "Node.js", "MongoDB", "AWS","PostgreSQL","Git","Jira","Jenkins","Nginx","Prisma ORM","REST APIs","JWT","Docker"],
-    current: false,
-  },
-  {
-    period: "Jun 2023 - Oct 2024 ",
-    role: "Intern",
-    company: "Akitra",
-    description:
-      "Built a regulatory compliance module that helps medical device companies manage FDA 510(k) submission workflows, documentation, approvals, and audit readiness.",
-    technologies: [
-      "React.js",
-      "Context Api",
-      "Integration",
-      "Prime React",
-      "TanStack Query",
-      "JavaScript",
-      "CSS3",
-      "HTML5",
-      "Saas",
-      "Git",
-      "JSON"
-     
-  
-    ],
-    current: false,
-  },{
-    period: "Jan 2023 - May 2023",
-    role:"Freelance Developer",
-    company: "Self-Employed",
-    description:
-      "Developed custom web applications for clients, focusing on responsive design and user experience. Delivered projects on time and provided post-launch support.",
-    technologies: ["CSS3",
-      "HTML5","JavaScript","Chakra UI","React"],
-  }
-];
+import { ArrowUpRight } from "lucide-react";
+import { experiences } from "../data/portfolioData.js";
 
 export const Experience = () => {
   return (
@@ -123,7 +73,19 @@ export const Experience = () => {
                       {exp.period}
                     </span>
                     <h3 className="text-xl font-semibold mt-2">{exp.role}</h3>
-                    <p className="text-muted-foreground">{exp.company}</p>
+                    {exp.link ? (
+                      <a
+                        href={exp.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors mt-0.5 group/complink"
+                      >
+                        <span>{exp.company}</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover/complink:opacity-100 group-hover/complink:translate-x-0.5 group-hover/complink:-translate-y-0.5 transition-all" />
+                      </a>
+                    ) : (
+                      <p className="text-muted-foreground">{exp.company}</p>
+                    )}
                     <p className="text-base text-muted-foreground mt-4">
                       {exp.description}
                     </p>

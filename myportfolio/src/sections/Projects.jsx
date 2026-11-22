@@ -7,54 +7,7 @@ import {
   Globe,
   Code2,
 } from "lucide-react";
-
-const projects = [
-  {
-    id: 1,
-    title: "Videotube | Full Stack Media Platform",
-    subtitle: "Enterprise Video Streaming & Sharing Platform",
-    description:
-      "A scalable, high-performance media sharing platform built using the MERN stack. Features 100+ concurrent video uploads, video transcoding, responsive feeds, and seamless playback.",
-    image: "/projects/project1.png",
-    category: "Full Stack",
-    tags: ["React", "JavaScript", "NodeJS", "MongoDB", "Express", "Prime React"],
-    link: "https://videotube-9k2a.vercel.app/",
-    github: "https://github.com/Kamal-Singh-Sijwali/videotube/tree/dev",
-    accentColor: "from-purple-500/20 via-indigo-500/10 to-transparent",
-    glowColor: "rgba(139, 92, 246, 0.25)",
-    tagAccent: "hover:border-purple-500/50 hover:text-purple-300",
-  },
-  {
-    id: 2,
-    title: "Crypto Z Coin Exchange",
-    subtitle: "Real-time Crypto Analytics & Trading Hub",
-    description:
-      "A fast and intuitive cryptocurrency tracker and exchange portal delivering real-time price feeds, dynamic market statistics, interactive charts, and crypto portfolio insights.",
-    image: "/projects/project3.png",
-    category: "Frontend & Web3",
-    tags: ["React", "JavaScript", "FastAPI", "Tailwind CSS", "REST APIs"],
-    link: "https://cryptoz-steel.vercel.app/",
-    github: "https://github.com/Kamal-Singh-Sijwali/coinmaster",
-    accentColor: "from-cyan-500/20 via-teal-500/10 to-transparent",
-    glowColor: "rgba(6, 182, 212, 0.25)",
-    tagAccent: "hover:border-cyan-500/50 hover:text-cyan-300",
-  },
-  {
-    id: 3,
-    title: "Video HUB",
-    subtitle: "Modern Content Discovery & Streaming",
-    description:
-      "Sleek and responsive video platform designed for rapid video discovery and upload workflows, powered by clean component architecture and smooth UI transitions.",
-    image: "/projects/project4.png",
-    category: "Frontend & Web3",
-    tags: ["React", "JavaScript", "Chakra UI", "Video Streaming"],
-    link: "https://react-video-appl.vercel.app/",
-    github: "https://github.com/Kamal-Singh-Sijwali/videoHUB",
-    accentColor: "from-pink-500/20 via-rose-500/10 to-transparent",
-    glowColor: "rgba(244, 63, 94, 0.25)",
-    tagAccent: "hover:border-pink-500/50 hover:text-pink-300",
-  },
-];
+import { projects } from "../data/portfolioData.js";
 
 const categories = ["All", "Full Stack", "Frontend & Web3"];
 
